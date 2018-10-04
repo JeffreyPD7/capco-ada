@@ -42,9 +42,11 @@ header {
   width: 100%;
 
   position: relative;
-  background-color: blue;
+  background-color: #FFF;
   color: white;
   margin: 0;
+  box-shadow: 0px 2px 5px rgba(black, 0.5);
+
   //padding: 10px;
 
 }
@@ -55,16 +57,14 @@ header {
   height: inherit;
   width: 80px;
   display: block;
-  background-color: red;
-
-
-
-
+  //background-color: red;
   float: left;
+  padding-top: 10px;
+  color: black;
 
   h3 {
     text-align: center;
-    margin: auto 7px;
+    margin: auto 0;
   }
 
   //::after {
@@ -101,21 +101,26 @@ header {
 
 .container {
   display: block;
-  height: 550px;
+  height: 350px;
   width: 50%;
   border-radius: 8px;
   background-color: #FFFFFF;
   box-shadow: 0px 2px 5px rgba(black, 0.5);
-  margin: 30px auto;
-  overflow: auto;
+  margin: 100px auto;
+  //overflow: auto;
+  overflow: hidden;
 
 
   &--sample-data {
     width: 85%;
+    height: 550px;
+    margin: 30px auto;
   }
 
   &--extra-credit {
     width: 90%;
+    overflow: hidden;
+    margin: 30px auto;
   }
 }
 
@@ -133,8 +138,11 @@ header {
 }
 
 .container_-_body {
-  //overflow: auto;
+  position:relative;
+  overflow: auto;
   //display: block;
+  height: 510px;
+  width: 100% !important;
 
 }
 
@@ -151,7 +159,7 @@ header {
 
 // Animation -------------------------------------------------------------------
 .container {
-  transition: width 2s;
+  transition: width 2s, height 2s, margin 2s;
 }
 
 // Active ----------------------------------------------------------------------
