@@ -99,15 +99,59 @@ header {
   }
 }
 
-.table-body {
+.container {
   display: block;
   height: 550px;
-  width: 85%;
+  width: 50%;
   border-radius: 8px;
   background-color: #FFFFFF;
   box-shadow: 0px 2px 5px rgba(black, 0.5);
   margin: 30px auto;
   overflow: auto;
+
+
+  &--sample-data {
+    width: 85%;
+  }
+
+  &--extra-credit {
+    width: 90%;
+  }
+}
+
+.container_-_header {
+  background-color: #E3F2FD;
+  height: 40px;
+  width: 100%;
+  color: black;
+  padding-top: 7px;
+  padding-left: 7px;
+
+  h4 {
+
+  }
+}
+
+.container_-_body {
+  //overflow: auto;
+  //display: block;
+
+}
+
+//.container--sample-data {
+//  width: 85%;
+//}
+//
+//.container--extra-credit {
+//  width: 90%;
+//}
+
+
+
+
+// Animation -------------------------------------------------------------------
+.container {
+  transition: width 2s;
 }
 
 // Active ----------------------------------------------------------------------

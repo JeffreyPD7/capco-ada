@@ -1,3 +1,54 @@
-<p>
-  sample-data works!
-</p>
+
+<table>
+  <thead>
+  <tr>
+    <th>name</th>
+    <th>phone</th>
+    <th>email</th>
+    <th>company</th>
+    <th>date_entry</th>
+    <th>org_num</th>
+    <th>address_1</th>
+    <th>city</th>
+    <th>zip</th>
+    <th>geo</th>
+    <th>pan</th>
+    <th>pin</th>
+    <th>id</th>
+    <th>status</th>
+    <th>fee</th>
+    <th>guid</th>
+    <th>date_exit</th>
+    <th>date_first</th>
+    <th>date_recent</th>
+    <th>url</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor='let data of this.dataList'>
+    <td>{{ data.name }}</td>
+    <td>{{ data.phone }}</td>
+    <td>{{ data.email }}</td>
+    <td>{{ data.company }}</td>
+    <td>{{ data.date_entry }}</td>
+    <td>{{ data.org_num }}</td>
+    <td>{{ data.address_1 }}</td>
+    <td>{{ data.city }}</td>
+    <td>{{ data.zip }}</td>
+    <td>{{ data.geo }}</td>
+    <td>{{ data.pan }}</td>
+    <td>{{ data.pin }}</td>
+    <td>{{ data.id }}</td>
+    <td>{{ data.status }}</td>
+    <td>{{ data.fee }}</td>
+    <td>{{ data.guid }}</td>
+    <td>{{ data.date_exit }}</td>
+    <td>{{ data.date_first }}</td>
+    <td>{{ data.date_recent }}</td>
+    <td>{{ data.url }}</td>
+
+  </tr>
+  </tbody>
+</table>
+

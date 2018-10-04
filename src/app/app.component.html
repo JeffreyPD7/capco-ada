@@ -5,15 +5,44 @@
   </div>
   <div class="header_-_nav">
     <ul>
-      <li><a routerLinkActive='active' [routerLink]="['/home']">Home</a></li>
-      <li><a routerLinkActive='active' [routerLink]="['/sample-data']">Sample Data</a></li>
-      <li><a routerLinkActive='active' [routerLink]="['/extra-credit']">Extra-Credit</a></li>
+      <li>
+        <a routerLinkActive='active'
+           [routerLink]="['/home']"
+           (click)="this.showHome = true; this.showSampleData = false; this.showExtraCredit = false"
+        >Home
+        </a>
+      </li>
+
+      <li>
+        <a routerLinkActive='active'
+           [routerLink]="['/sample-data']"
+           (click)="this.showHome = false; this.showSampleData = true; this.showExtraCredit = false"
+        >Sample Data
+        </a>
+      </li>
+
+      <li>
+        <a routerLinkActive='active'
+           [routerLink]="['/extra-credit']"
+           (click)="this.showHome = false; this.showSampleData = false; this.showExtraCredit = true"
+        >Extra-Credit
+        </a>
+      </li>
     </ul>
   </div>
 </header>
 
-<div class='table-body'>
-  <router-outlet></router-outlet>
+<div class='container'
+     [ngClass]="(!this.showHome) ?'container--' + this.setClasses() :''">
+  <div class="container_-_header">
+    <h4 [hidden]="(!this.showSampleData)">Sample Data</h4>
+    <h4 [hidden]="(!this.showExtraCredit)">Extra Credit</h4>
+  </div>
+
+  <div class="container_-_body">
+    <router-outlet></router-outlet>
+  </div>
+
 </div>
 
 
