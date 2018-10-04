@@ -1,8 +1,20 @@
-
 <header>
+
   <div class="header_-_logo">
     <h3>C - ADA</h3>
+    <div class="header_-_logo_--_breadcrumbs" *ngIf="(!this.showHome)">
+      <div class="header_-_logo_--_breadcrumbs_---_double-arrow">
+        <h4>&#8963;</h4>
+        <h4>&#8963;</h4>
+      </div>
+
+      <div class="header_-_logo_--_breadcrumbs_---_page">
+        <h4 [hidden]="(!this.showSampleData)">Sample Data</h4>
+        <h4 [hidden]="(!this.showExtraCredit)">Extra Credit</h4>
+      </div>
+    </div>
   </div>
+
   <div class="header_-_nav">
     <ul>
       <li>
@@ -35,8 +47,8 @@
 <div class='container'
      [ngClass]="(!this.showHome) ?'container--' + this.setClasses() :''">
   <div class="container_-_header" [hidden]="(this.showHome)">
-    <h4 [hidden]="(!this.showSampleData)">Sample Data</h4>
-    <h4 [hidden]="(!this.showExtraCredit)">Extra Credit</h4>
+    <!--<h4 [hidden]="(!this.showSampleData)">Sample Data</h4>-->
+    <!--<h4 [hidden]="(!this.showExtraCredit)">Extra Credit</h4>-->
   </div>
 
   <div class="container_-_body">

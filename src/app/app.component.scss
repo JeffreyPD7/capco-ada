@@ -55,16 +55,19 @@ header {
 .header_-_logo {
   position: relative;
   height: inherit;
-  width: 80px;
-  display: block;
+  width: 250px;
+  //display: block;
+  display: inline-block;
   //background-color: red;
   float: left;
-  padding-top: 10px;
+  //padding-top: 10px;
   color: black;
+  //text-align: left;
 
   h3 {
-    text-align: center;
-    margin: auto 0;
+    //text-align: center;
+    margin: 10px 10px 0 10px;
+    float: left;
   }
 
   //::after {
@@ -73,9 +76,30 @@ header {
   //}
 }
 
+.header_-_logo_--_breadcrumbs {
+  display: inline-block;
+  float: left;
+  //background-color: yellow;
+  height: inherit;
+  width: 65%;
+  //width:
+}
+
+.header_-_logo_--_breadcrumbs_---_double-arrow h4 {
+    float: left;
+    transform: rotate(90deg) scale(2);
+    margin-top: 12px;
+}
+
+.header_-_logo_--_breadcrumbs_---_page h4 {
+    margin-top: 11px;
+    margin-left: 15px;
+    float: left;
+}
+
 .header_-_nav {
   height: inherit;
-  //width: 80px;
+  width: 500px;
   float: right;
   color: inherit;
   background-color: yellow;
