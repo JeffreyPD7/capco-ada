@@ -34,7 +34,7 @@
 
 <div class='container'
      [ngClass]="(!this.showHome) ?'container--' + this.setClasses() :''">
-  <div class="container_-_header">
+  <div class="container_-_header" [hidden]="(this.showHome)">
     <h4 [hidden]="(!this.showSampleData)">Sample Data</h4>
     <h4 [hidden]="(!this.showExtraCredit)">Extra Credit</h4>
   </div>

@@ -10,6 +10,8 @@ import { ISampleData } from '../../interfaces/sample-data.interface';
 })
 export class SampleDataComponent implements OnInit {
 
+  // @Output() currentUrl = new EventEmitter<string>();
+
   public dataList: ISampleData[] = [];
   public errorMsg: string;
 
@@ -24,6 +26,7 @@ export class SampleDataComponent implements OnInit {
         error => this.errorMsg = <any>error
       );
 
+    // this.currentUrl.emit()
     // alert(JSON.stringify(this.dataList));
   }
 
