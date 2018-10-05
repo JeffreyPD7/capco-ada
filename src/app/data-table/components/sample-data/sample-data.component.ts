@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 import { SampleDataService } from '../../services/sample-data.service';
 import { ISampleData } from '../../interfaces/sample-data.interface';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-sample-data',
@@ -11,9 +13,13 @@ import { ISampleData } from '../../interfaces/sample-data.interface';
 export class SampleDataComponent implements OnInit {
 
   // @Output() currentUrl = new EventEmitter<string>();
+  @Input() filter;
 
   public dataList: ISampleData[] = [];
   public errorMsg: string;
+
+  public selectedFilter: number = 25;
+  public filterRow: any[] = [];
 
   JSON: JSON;
 
@@ -28,6 +34,13 @@ export class SampleDataComponent implements OnInit {
 
     // this.currentUrl.emit()
     // alert(JSON.stringify(this.dataList));
+
+    // Populate filterRow array
+    for (let i = 1; i <= 8; i++) {
+      this.filterRow.push(
+        {id: i, value: 25 * i}
+      );
+    }
   }
 
 }

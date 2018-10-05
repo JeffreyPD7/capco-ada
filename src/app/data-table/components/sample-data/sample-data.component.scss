@@ -1,44 +1,41 @@
 
 table {
-  //margin-top: 10px;
-  margin: 15px;
+  //margin: 15px;
+  //height: 450px;
+  //border-collapse: collapse;
+  //overflow:auto !important;
+}
+
+thead {
+//  height: 50px;
+//  width: 500px;
+//  background-color: yellowgreen;
 }
 
 td {
-  //width: 500px;
   border-bottom: 2px solid #E0E0E0;
 }
 
 th {
-  text-align: left;
-  border-bottom: 3px solid #2962FF;
-}
-
-table,
-th,
-td {
- border-collapse: collapse;
+  //text-align: left;
+  //border-bottom: 3px solid #2962FF;
 }
 
 th,td {
-  //min-width: 200px;
-  padding-left: 5px;
-  padding-right: 5px;
+  //padding-left: 5px;
+  //padding-right: 5px;
 }
-
 
 tbody {
-  overflow: auto;
+  //overflow: auto;
+  //width:100%;
+  //height: 100%;
 }
-//tr:nth-child(even) {
-//  //backgroud-color: #E0E0E0;
-//  backgroud: black !important;
-//}
-//
-//tr:nth-child(odd) {
-//  //backgroud-color: #E0E0E0;
-//  backgroud-color: red;
-//}
+
+
+
+
+
 
 
 // Utils
@@ -63,14 +60,59 @@ tbody {
 }
 
 
-//table tbody, table thead
-//{
-//  display: block;
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px 16px;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: #eee;
+}
+
+
+
+//table thead tr{
+//  display:block;
+//}
+
+//table th,table td{
+//  width:100px;//fixed width
 //}
 //
 //
-//table tbody
-//{
-//  overflow: auto;
-//  height: 100px;
+//table th{
+//  width:100px;//fixed width
 //}
+
+//table  tbody{
+//  display:block;
+//  //height:200px;
+//  overflow:auto;//set tbody to auto
+//}
+
+
+.container_-_footer {
+  //background-color: #3d5afe;
+  background: #ededed;
+  width: 100%;
+  height: 45px;
+  display: block;
+  padding: 8px 0 0 10px;
+  //position: absolute;
+  //top: 490px;
+  //bottom: 0;
+}
+
+.container_-_footer_--_fiter-rows {
+  select {
+    width: 100px;
+    border-radius: 10px;
+  }
+}

@@ -49,11 +49,52 @@
   <div class="container_-_header" [hidden]="(this.showHome)">
     <!--<h4 [hidden]="(!this.showSampleData)">Sample Data</h4>-->
     <!--<h4 [hidden]="(!this.showExtraCredit)">Extra Credit</h4>-->
+
+    <!--<table>-->
+      <!--<thead>-->
+      <!--<tr>-->
+        <!--<th class="w-200">Name</th>-->
+        <!--<th class="w-150">Phone</th>-->
+        <!--<th class="w-150">Email</th>-->
+        <!--<th class="w-250">Company</th>-->
+        <!--<th class="w-200">Date_Entry</th>-->
+        <!--<th class="w-150">Org_Num</th>-->
+        <!--<th class="w-200">Address_1</th>-->
+        <!--<th class="w-150">City</th>-->
+        <!--<th class="w-100">Zip</th>-->
+        <!--<th class="w-200">Geo</th>-->
+        <!--<th class="w-200">Pan</th>-->
+        <!--<th class="w-100">Pin</th>-->
+        <!--<th class="w-50">Id</th>-->
+        <!--<th class="w-100">Status</th>-->
+        <!--<th class="w-100">Fee</th>-->
+        <!--<th class="w-250">Guid</th>-->
+        <!--<th class="w-200">Date_Exit</th>-->
+        <!--<th class="w-200">Date_First</th>-->
+        <!--<th class="w-200">Date_Recent</th>-->
+        <!--<th class="w-100">Url</th>-->
+      <!--</tr>-->
+      <!--</thead>-->
+    <!--</table>-->
   </div>
 
   <div class="container_-_body">
     <router-outlet></router-outlet>
   </div>
+
+  <!--<div class="container_-_footer">-->
+    <!--<div class="container_-_footer_&#45;&#45;_filter-rows">-->
+      <!--<form action="">-->
+      <!--<label for="filterRows"></label>-->
+      <!--<select [(ngModel)]="this.selectedFilter" name="filterRows" id="filterRows">-->
+        <!--<option  *ngFor="let row of this.filterRow" [value]="row.value">{{row.value}}</option>-->
+      <!--</select>-->
+      <!--</form>-->
+    <!--</div>-->
+
+    <!--<div class="cotainer_-_footer_&#45;&#45;_pagination">-->
+    <!--</div>-->
+  <!--</div>-->
 
 </div>
 

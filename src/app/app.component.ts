@@ -15,7 +15,19 @@ export class AppComponent implements OnInit{
   public showSampleData: boolean = false;
   public showExtraCredit: boolean = false;
 
-  constructor(private router: Router) {}
+  // public selectedFilter: number = 5;
+
+  // public filterRow: any[] = [
+  //   {id: 1, value: 5},
+  //   {id: 2, value: 10},
+  //   {id: 3, value: 15},
+  //   {id: 4, value: 20},
+  //   {id: 5, value: 25}
+  // ];
+
+  // public filterRow: any[] = []
+
+    constructor(private router: Router) {}
 
   ngOnInit() {
     this.router.events.subscribe(
@@ -25,6 +37,13 @@ export class AppComponent implements OnInit{
         }
       }
     );
+
+    // Populate filterRow array
+    // for (let i = 1; i <= 5; i++) {
+    //   this.filterRow.push(
+    //     {id: i, value: 5 * i}
+    //     );
+    // }
   }
 
   public setCurrentRoute(url): void {

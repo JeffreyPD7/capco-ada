@@ -1,4 +1,6 @@
 
+<!--<h1>{{this.dataList.length}}</h1>-->
+<div style="overflow-x:auto; height: 505px;">
 <table>
   <thead>
   <tr>
@@ -26,7 +28,10 @@
   </thead>
 
   <tbody>
-  <tr *ngFor='let data of this.dataList'>
+  <ng-container *ngFor="let data of this.dataList; let i = index;">
+
+  <!--<tr *ngFor='let data of this.dataList'>-->
+  <tr *ngIf="(i < this.selectedFilter)">
     <td class="w-200">{{ data.name }}</td>
     <td class="w-150">{{ data.phone }}</td>
     <td class="w-150">{{ data.email }}</td>
@@ -49,6 +54,24 @@
     <td class="w-100">{{ data.url }}</td>
 
   </tr>
+  </ng-container>
   </tbody>
 </table>
+</div>
+
+<div class="container_-_footer">
+  <div class="container_-_footer_--_filter-rows">
+    <!--<form action="">-->
+      <label for="filterRows">Show Rows </label>
+      <select [(ngModel)]="this.selectedFilter" name="filterRows" id="filterRows">
+        <option  *ngFor="let row of this.filterRow" [value]="row.value">{{row.value}}</option>
+      </select>
+    <!--</form>-->
+  </div>
+
+  <div class="cotainer_-_footer_--_pagination">
+  </div>
+</div>
+
+
 
