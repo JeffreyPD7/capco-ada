@@ -28,10 +28,12 @@
   </thead>
 
   <tbody>
-  <ng-container *ngFor="let data of this.dataList; let i = index;">
+  <!--<ng-container *ngFor="let data of this.dataList | slice:this.sliceStart:this.sliceEnd; let i = index;">-->
+  <ng-container
+    *ngFor="let data of this.dataList | slice:this.sliceStart:this.sliceEnd">
 
-  <!--<tr *ngFor='let data of this.dataList'>-->
-  <tr *ngIf="(i < this.selectedFilter)">
+  <!--<tr *ngIf="(i < this.selectedFilter)">-->
+  <tr>
     <td class="w-200">{{ data.name }}</td>
     <td class="w-150">{{ data.phone }}</td>
     <td class="w-150">{{ data.email }}</td>
@@ -63,13 +65,76 @@
   <div class="container_-_footer_--_filter-rows">
     <!--<form action="">-->
       <label for="filterRows">Show Rows </label>
-      <select [(ngModel)]="this.selectedFilter" name="filterRows" id="filterRows">
+      <!--<select [(ngModel)]="this.selectedFilter" name="filterRows" id="filterRows">-->
+      <select [(ngModel)]="this.selectedFilter" name="filterRows" id="filterRows" (ngModelChange)="this.filterChange(this.selectedFilter)">
         <option  *ngFor="let row of this.filterRow" [value]="row.value">{{row.value}}</option>
       </select>
     <!--</form>-->
   </div>
 
-  <div class="cotainer_-_footer_--_pagination">
+  <div class="container_-_footer_--_pagination">
+    <div class="first-page">
+      <div class="double-arrow-left">
+        <h4>&#8963;</h4>
+        <h4>&#8963;</h4>
+      </div>
+
+      <h3>First</h3>
+    </div>
+
+    <div class="previous-page" (click)="this.previousPage()">
+      <div class="double-arrow-left">
+        <h4>&#8963;</h4>
+      </div>
+
+      <h3>Previous</h3>
+    </div>
+
+
+    <div class="pages">
+      <div class="num-one">
+        <h3>
+          {{ ((this.currentPage - 1) > 1) ?(this.currentPage - 2) :'' }}
+        </h3>
+      </div>
+      <div class="num-two">
+        <h3>
+          {{ (this.currentPage > 1) ?(this.currentPage - 1) :'' }}
+        </h3>
+      </div>
+      <div class="num-three">
+        <h3>
+          {{ this.currentPage }}
+        </h3>
+      </div>
+      <div class="num-four">
+        <h3>
+          {{ ((this.currentPage + 1) <= this.numOfPages) ?(this.currentPage + 1) :'' }}
+        </h3>
+      </div>
+      <div class="num-five">
+        <h3>
+          {{ ((this.currentPage + 2) <= this.numOfPages) ?(this.currentPage + 2) :'' }}
+        </h3>
+      </div>
+    </div>
+
+    <div class="next-page" (click)="this.nextPage()">
+      <h3>Next</h3>
+
+      <div class="arrow-right">
+        <h4>&#8963;</h4>
+      </div>
+    </div>
+
+    <div class="last-page">
+      <h3>Last</h3>
+
+      <div class="double-arrow-right">
+        <h4>&#8963;</h4>
+        <h4>&#8963;</h4>
+      </div>
+    </div>
   </div>
 </div>
 
