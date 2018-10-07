@@ -17,6 +17,7 @@ export class SampleDataComponent implements OnInit {
 
   public dataList: ISampleData[] = [];
   public errorMsg: string;
+  public dataListLength: number;
 
   public selectedFilter: number = 25;
   public filterRow: any[] = [];
@@ -25,12 +26,8 @@ export class SampleDataComponent implements OnInit {
 
 
   // Pagination Section ---------------------------------------
-  // public numOne: number;
-  // public numTwo: number;
   public currentPage: number = 1;
-  // public numFour: number;
-  // public numFive: number;
-  public newDataList: ISampleData[] = [];
+  // public newDataList: ISampleData[] = [];
 
   public sliceStart: number = 0;
   public sliceEnd: number = 25;
@@ -48,21 +45,39 @@ export class SampleDataComponent implements OnInit {
     this._sampleData.getData()
       .subscribe(
         data => this.dataList = data,
-        error => this.errorMsg = <any>error
+        error => this.errorMsg = <any>error,
+        () => {
+          this.dataListLength = this.dataList.length;
+          this.populateArray(this.dataList);
+          // alert('Value is ' + this.dataListLength);
+        }
       );
 
-    // this.currentUrl.emit()
-    // alert(JSON.stringify(this.dataList));
 
     // Populate filterRow array
-    for (let i = 1; i <= 8; i++) {
+    // for (let i = 1; i <= 8; i++) {
+    //   this.filterRow.push(
+    //     {id: i, value: 25 * i}
+    //   );
+    // }
+  }
+
+  public populateArray(dataList: ISampleData[]): void {
+    // let list
+
+    let list = Math.floor(dataList.length / this.selectedFilter);
+
+    if ((dataList.length % this.selectedFilter) !== 0) {
+      list++;
+    }
+
+    alert(list);
+
+    for (let i = 1; i <= list; i++) {
       this.filterRow.push(
         {id: i, value: 25 * i}
       );
     }
-
-    // alert(this.dataList[].length);
-    // alert(Object.keys(this.dataList).length);
   }
 
   // Pagination Section ---------------------------------------
@@ -78,13 +93,27 @@ export class SampleDataComponent implements OnInit {
     this.currentPage--;
   }
 
+  public firstPage(): void {
+    this.sliceStart = 0;
+    this.sliceEnd = this.selectedFilter;
+    this.currentPage = 1;
+  }
+
+  public lastPage(): void {
+    this.sliceEnd = 200;
+    this.sliceStart = 200 - this.selectedFilter;
+    this.currentPage = this.numOfPages;
+  }
 
   public filterChange(event): void {
     this.sliceStart = 0;
     this.sliceEnd = event;
     this.currentPage = 1;
-    this.numOfPages = 200 / this.selectedFilter;
-    // alert(`Value is ${event}`);
+    this.numOfPages = Math.floor(200 / this.selectedFilter);
+
+    if ((200 % this.selectedFilter) !== 0) {
+      this.numOfPages++;
+    }
   }
 
   // end of pagination ----------------------------------------

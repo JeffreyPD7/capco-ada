@@ -73,7 +73,8 @@
   </div>
 
   <div class="container_-_footer_--_pagination">
-    <div class="first-page">
+    <div class="first-page" [class.isDisabled]="(this.currentPage <= 1)"
+         (click)="(this.currentPage <= 1) ?$event.stopPropagation() :this.firstPage()">
       <div class="double-arrow-left">
         <h4>&#8963;</h4>
         <h4>&#8963;</h4>
@@ -82,7 +83,8 @@
       <h3>First</h3>
     </div>
 
-    <div class="previous-page" (click)="this.previousPage()">
+    <div class="previous-page" [class.isDisabled]="(this.currentPage <= 1)"
+         (click)="(this.currentPage <= 1) ?$event.stopPropagation() :this.previousPage()">
       <div class="double-arrow-left">
         <h4>&#8963;</h4>
       </div>
@@ -119,7 +121,8 @@
       </div>
     </div>
 
-    <div class="next-page" (click)="this.nextPage()">
+    <div class="next-page" [class.isDisabled]="(this.currentPage >= this.numOfPages)"
+         (click)="(this.currentPage >= this.numOfPages) ?$event.stopPropagation() :this.nextPage()">
       <h3>Next</h3>
 
       <div class="arrow-right">
@@ -127,7 +130,8 @@
       </div>
     </div>
 
-    <div class="last-page">
+    <div class="last-page" [class.isDisabled]="(this.currentPage >= this.numOfPages)"
+         (click)="(this.currentPage >= this.numOfPages) ?$event.stopPropagation() :this.lastPage()">
       <h3>Last</h3>
 
       <div class="double-arrow-right">

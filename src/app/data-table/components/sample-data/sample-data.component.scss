@@ -12,7 +12,8 @@ td {
 th {
   position: sticky;
   top: 0;
-  background: #eee;
+  //background: #BBDEFB;
+  background: #64B5F6;
 }
 
 
@@ -49,6 +50,7 @@ td {
   width: 100%;
   max-height: 45px;
   display: block;
+  user-select: none;
   //padding: 8px 0 0 10px;
   //position: absolute;
   //top: 490px;
@@ -73,12 +75,14 @@ td {
 // Pagination Section
 
 .container_-_footer_--_pagination {
-  background-color: lightblue;
+  //background-color: lightblue;
   width: 75%;
   max-height: 45px !important;
   position: relative;
   float: right;
-  display: block;
+  //display: block;
+  display: flex;
+  justify-content: flex-end;
 }
 
 
@@ -101,12 +105,12 @@ td {
 .last-page,
 .next-page,
 .previous-page {
-  width: 15%;
+  //width: 15%;
   height: 45px;
   display: inline-block;
   position: relative;
   text-align: left;
-  float: left;
+  //float: right;
   cursor: pointer;
 
   h3 {
@@ -122,15 +126,17 @@ td {
 
 .last-page,
 .next-page {
-
+  //float: right;
 }
 
 .first-page {
-  background-color: lightcoral;
+  //background-color: lightcoral;
+  width: 95px;
 }
 
 .previous-page {
-  background-color: lightseagreen;
+  //background-color: lightseagreen;
+  width: 130px;
 
   .double-arrow-left {
     padding-left: 3px;
@@ -138,7 +144,7 @@ td {
 }
 
 .next-page {
-  background-color: lightseagreen;
+  //background-color: lightseagreen;
   padding-left: 10px;
   position: relative;
   width: 80px;
@@ -149,8 +155,10 @@ td {
 }
 
 .last-page {
-  background-color: lightsalmon;
+  //background-color: lightsalmon;
   padding-left: 10px;
+  width: 100px;
+  float: right;
 
   h3 {
     float: left;
@@ -227,7 +235,7 @@ td {
   //width: 140px;
   width: auto;
   float: left;
-  background-color: yellow;
+  //background-color: yellow;
   padding-top: 8px;
 }
 
@@ -247,9 +255,18 @@ td {
 }
 
 .num-three {
-  background-color: blue;
+  //background-color: #BBDEFB;
+  background-color: #64B5F6;
   color: white;
   height: 28px;
   border-radius: 8px;
   padding-bottom: 8px;
+}
+
+.isDisabled {
+  color: #C1C1C1;
+
+  h4 {
+    color: #C1C1C1;
+  }
 }
