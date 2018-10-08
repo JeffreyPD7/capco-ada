@@ -26,11 +26,9 @@
   </thead>
 
   <tbody>
-  <!--<ng-container *ngFor="let data of this.dataList | slice:this.sliceStart:this.sliceEnd; let i = index;">-->
   <ng-container
     *ngFor="let data of this.dataList | slice:this.sliceStart:this.sliceEnd">
 
-    <!--<tr *ngIf="(i < this.selectedFilter)">-->
     <tr>
       <td class="w-200">{{ data.name }}</td>
       <td class="w-150">{{ data.phone }}</td>

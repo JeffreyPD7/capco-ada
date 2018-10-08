@@ -16,20 +16,18 @@ export class SampleDataService {
   getData(): Observable<ISampleData[]> {
     return this.http.get<ISampleData[]>(this.url).pipe(
       tap(data => console.log('Data import successful')),
-      catchError(this.errorHandler)
+      catchError(this.handleError)
     );
   }
 
-  private errorHandler(err: HttpErrorResponse) {
-    let errorMsg = '';
-
+  private handleError(err: HttpErrorResponse) {
     if (err.error instanceof ErrorEvent) {
-      errorMsg = `Error ${err.error.message}`;
+      console.error('client side error: ', err.error.message);
     } else {
-      errorMsg = `Server Error ${err.status}, error message is: ${err.message}`;
+      console.error('server side error: ', err);
     }
 
-    console.error(errorMsg);
-    return throwError(errorMsg);
+    console.error(err);
+    return throwError(err);
   }
 }

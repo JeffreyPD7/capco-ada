@@ -1,42 +1,28 @@
 
-
 .container_-_footer {
-  //background-color: #3d5afe;
   background: #ededed;
   width: 100%;
   max-height: 45px;
   display: block;
   user-select: none;
-  //padding: 8px 0 0 10px;
-  //position: absolute;
-  //top: 490px;
-  //bottom: 0;
 }
 
 .container_-_footer_--_filter-rows {
   display: inline-block;
-  //float: left;
-  //background-color: green;
   width: 25%;
   height: 45px;
   padding: 9px 0 0 10px;
 
   select {
-    //width: 100px;
     border-radius: 4px;
   }
 }
 
-
-// Pagination Section
-
 .container_-_footer_--_pagination {
-  //background-color: lightblue;
   width: 75%;
   max-height: 45px !important;
   position: relative;
   float: right;
-  //display: block;
   display: flex;
   justify-content: flex-end;
 }
@@ -45,37 +31,22 @@
 .last-page,
 .next-page,
 .previous-page {
-  //width: 15%;
   height: 45px;
   display: inline-block;
   position: relative;
   text-align: left;
-  //float: right;
   cursor: pointer;
 
   h3 {
-    //background: green;
     padding-top: 8px;
   }
 }
 
-.first-page,
-.previous-page {
-
-}
-
-.last-page,
-.next-page {
-  //float: right;
-}
-
 .first-page {
-  //background-color: lightcoral;
   width: 95px;
 }
 
 .previous-page {
-  //background-color: lightseagreen;
   width: 130px;
 
   .double-arrow-left {
@@ -84,7 +55,6 @@
 }
 
 .next-page {
-  //background-color: lightseagreen;
   padding-left: 10px;
   position: relative;
   width: 80px;
@@ -95,7 +65,6 @@
 }
 
 .last-page {
-  //background-color: lightsalmon;
   padding-left: 10px;
   width: 100px;
   float: right;
@@ -109,18 +78,14 @@
     height: 0;
     width: 0;
     margin: -2px 0 0 11px;
-    //padding: 0;
   }
 }
 
 .double-arrow-left {
   color: black;
-  //background-color: yellow;
   display: inline;
   padding: 6px;
   margin: 8px 0 0 15px;
-
-  //height: 45px;
 
   h4 {
     margin: 0;
@@ -130,25 +95,13 @@
 
 .arrow-right {
   color: black;
-  //background-color: yellow;
-  //height: inherit;
-  //width: inherit;
   display: block;
   position: absolute;
   left: 40px;
   top: 6px;
-  //display: inline;
-  //padding: 6px;
-  //margin: 8px 0 0 15px;
   transform: rotate(90deg) scale(2);
 
-  //float: right;
 }
-
-
-//.arrow--left:nth-child(1) {
-//  float: left;
-//}
 
 .double-arrow-left {
   float: left;
@@ -156,34 +109,21 @@
 }
 
 .double-arrow-right {
-  //float: right;
   transform: rotate(90deg) scale(2);
-  //background-color: limegreen;
   position: absolute;
   display: inline;
 
   h4 {
-      //float:left;
     width: 10px;
     height: 10px;
     line-height: 0;
-    //margin: 0 !important;
-    //padding: 0 !important;
   }
 }
 
-//.double-arrow h4 {
-//  float: left;
-//  transform: rotate(90deg) scale(2);
-//  margin-top: 12px;
-//}
-
 .pages {
   height: 45px;
-  //width: 140px;
   width: auto;
   float: left;
-  //background-color: yellow;
   padding-top: 8px;
 }
 
@@ -203,7 +143,6 @@
 }
 
 .num-three {
-  //background-color: #BBDEFB;
   background-color: #64B5F6;
   color: white;
   height: 28px;

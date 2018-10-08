@@ -9,42 +9,27 @@ header {
   margin: 0;
   box-shadow: 0px 2px 5px rgba(black, 0.5);
 
-  //padding: 10px;
-
 }
-
 
 .header_-_logo {
   position: relative;
   height: inherit;
   width: 250px;
-  //display: block;
   display: inline-block;
-  //background-color: red;
   float: left;
-  //padding-top: 10px;
   color: black;
-  //text-align: left;
 
   h3 {
-    //text-align: center;
     margin: 10px 10px 0 10px;
     float: left;
   }
-
-  //::after {
-  //  @include pseudo();
-  //  clear: both;
-  //}
 }
 
 .header_-_logo_--_breadcrumbs {
   display: inline-block;
   float: left;
-  //background-color: yellow;
   height: inherit;
   width: 65%;
-  //width:
 }
 
 .header_-_logo_--_breadcrumbs_---_double-arrow h4 {
@@ -64,7 +49,6 @@ header {
   width: 350px;
   float: right;
   color: inherit;
-  //background-color: yellow;
 
   ul {
     display: inline-block;
@@ -76,11 +60,8 @@ header {
   }
 
   a {
-    //background-color: #00bcd4;
     padding: 10px;
     line-height: 3rem;
-    //border-radius: 10px;
-    //margin-top: 15px;
   }
 }
 

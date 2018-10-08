@@ -1,5 +1,4 @@
-
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import {SampleDataService} from '../../../shared/services/sample-data.service';
 import {ISampleData} from '../../../shared/interfaces/sample-data.interface';
@@ -11,9 +10,6 @@ import {ISampleData} from '../../../shared/interfaces/sample-data.interface';
 })
 export class SampleDataComponent implements OnInit {
 
-  // @Output() currentUrl = new EventEmitter<string>();
-  // @Input() filter;
-
   public dataList: ISampleData[] = [];
   public errorMsg: string;
   public dataListLength: number;
@@ -24,18 +20,10 @@ export class SampleDataComponent implements OnInit {
   JSON: JSON;
 
 
-  // Pagination Section ---------------------------------------
   public currentPage = 1;
-  // public newDataList: ISampleData[] = [];
-
   public sliceStart = 0;
   public sliceEnd = 25;
   public numOfPages = 5;
-
-
-
-  // end of pagination ----------------------------------------
-
 
   constructor(private _sampleData: SampleDataService) {
   }
@@ -48,23 +36,12 @@ export class SampleDataComponent implements OnInit {
         () => {
           this.dataListLength = this.dataList.length;
           this.populateArray(this.dataList);
-          // alert('Value is ' + this.dataListLength);
         }
       );
-
-
-    // Populate filterRow array
-    // for (let i = 1; i <= 8; i++) {
-    //   this.filterRow.push(
-    //     {id: i, value: 25 * i}
-    //   );
-    // }
   }
 
   public populateArray(dataList: ISampleData[]): void {
-    // let list
     this.dataListLength = dataList.length;
-    // alert(`This is dataListLength ${this.dataListLength}`);
 
     let list = Math.floor(this.dataListLength / this.selectedFilter);
 
@@ -80,18 +57,12 @@ export class SampleDataComponent implements OnInit {
     }
 
     this.numOfPages = list;
-
-    // alert(`This is filterRow ${JSON.stringify(this.filterRow)}`);
   }
-
-  // Pagination Section ---------------------------------------
 
   public nextPage(): void {
     this.sliceStart = this.sliceEnd;
     this.sliceEnd = this.sliceEnd + this.selectedFilter;
     this.currentPage++;
-
-    // alert(`This is the selectedFileter ${this.selectedFilter}`);
   }
 
   public previousPage(): void {
@@ -123,6 +94,5 @@ export class SampleDataComponent implements OnInit {
     }
   }
 
-  // end of pagination ----------------------------------------
 
 }

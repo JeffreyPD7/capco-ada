@@ -23,8 +23,6 @@ export class TableSharedComponent implements OnInit {
       .subscribe(
         data => this.dataList = data,
         error => this.errorMsg = <any>error
-
       );
   }
-
 }

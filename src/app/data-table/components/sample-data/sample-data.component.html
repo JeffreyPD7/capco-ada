@@ -5,13 +5,10 @@
 
 <div class="container_-_footer">
   <div class="container_-_footer_--_filter-rows">
-    <!--<form action="">-->
       <label for="filterRows">Show Rows </label>
-      <!--<select [(ngModel)]="this.selectedFilter" name="filterRows" id="filterRows">-->
       <select [(ngModel)]="this.selectedFilter" name="filterRows" id="filterRows" (ngModelChange)="this.filterChange(this.selectedFilter)">
         <option  *ngFor="let row of this.filterRow" [value]="row.value">{{row.value}}</option>
       </select>
-    <!--</form>-->
   </div>
 
   <div class="container_-_footer_--_pagination">
