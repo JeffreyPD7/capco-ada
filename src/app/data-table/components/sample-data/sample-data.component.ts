@@ -1,9 +1,12 @@
 import {Component, OnInit, Input} from '@angular/core';
 
 
-import {SampleDataService} from '../../services/sample-data.service';
-import {ISampleData} from '../../interfaces/sample-data.interface';
+// import { SampleDataService
+// import { ISampleDat a} from '../../interfaces/sample-data.interface';
 import {NgForm} from '@angular/forms';
+
+import {SampleDataService} from '../../../shared/services/sample-data.service';
+import {ISampleData} from '../../../shared/interfaces/sample-data.interface';
 
 @Component({
   selector: 'app-sample-data',
@@ -13,7 +16,7 @@ import {NgForm} from '@angular/forms';
 export class SampleDataComponent implements OnInit {
 
   // @Output() currentUrl = new EventEmitter<string>();
-  @Input() filter;
+  // @Input() filter;
 
   public dataList: ISampleData[] = [];
   public errorMsg: string;

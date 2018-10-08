@@ -1,0 +1,59 @@
+
+<table>
+  <thead>
+  <tr>
+    <th class="w-200">Name</th>
+    <th class="w-150">Phone</th>
+    <th class="w-150">Email</th>
+    <th class="w-250">Company</th>
+    <th class="w-200">Date_Entry</th>
+    <th class="w-150">Org_Num</th>
+    <th class="w-200">Address_1</th>
+    <th class="w-150">City</th>
+    <th class="w-100">Zip</th>
+    <th class="w-200">Geo</th>
+    <th class="w-200">Pan</th>
+    <th class="w-100">Pin</th>
+    <th class="w-50">Id</th>
+    <th class="w-100">Status</th>
+    <th class="w-100">Fee</th>
+    <th class="w-250">Guid</th>
+    <th class="w-200">Date_Exit</th>
+    <th class="w-200">Date_First</th>
+    <th class="w-200">Date_Recent</th>
+    <th class="w-100">Url</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <!--<ng-container *ngFor="let data of this.dataList | slice:this.sliceStart:this.sliceEnd; let i = index;">-->
+  <ng-container
+    *ngFor="let data of this.dataList | slice:this.sliceStart:this.sliceEnd">
+
+    <!--<tr *ngIf="(i < this.selectedFilter)">-->
+    <tr>
+      <td class="w-200">{{ data.name }}</td>
+      <td class="w-150">{{ data.phone }}</td>
+      <td class="w-150">{{ data.email }}</td>
+      <td class="w-250">{{ data.company }}</td>
+      <td class="w-200">{{ data.date_entry }}</td>
+      <td class="w-150">{{ data.org_num }}</td>
+      <td class="w-200">{{ data.address_1 }}</td>
+      <td class="w-150">{{ data.city }}</td>
+      <td class="w-100">{{ data.zip }}</td>
+      <td class="w-200">{{ data.geo }}</td>
+      <td class="w-200">{{ data.pan }}</td>
+      <td class="w-100">{{ data.pin }}</td>
+      <td class="w-50">{{ data.id }}</td>
+      <td class="w-100">{{ data.status }}</td>
+      <td class="w-100">{{ data.fee }}</td>
+      <td class="w-250">{{ data.guid }}</td>
+      <td class="w-200">{{ data.date_exit }}</td>
+      <td class="w-200">{{ data.date_first }}</td>
+      <td class="w-200">{{ data.date_recent }}</td>
+      <td class="w-100">{{ data.url }}</td>
+
+    </tr>
+  </ng-container>
+  </tbody>
+</table>
