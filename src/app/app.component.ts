@@ -18,12 +18,27 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {}
 
+
+  /**
+   * Receive emitted change of selected routes
+   *
+   * @method
+   * @public
+   * @param {Array<boolean>} e - EventEmitter array
+   */
   public onShowRouteEvent(e) {
     this.showHome = e[0];
     this.showSampleData = e[1];
     this.showExtraCredit = e[2];
   }
 
+  /**
+   *  Change classes pertaining to selected route
+   *
+   * @method
+   * @public
+   * @returns {string}
+   */
   public setClasses(): string {
     if (this.showSampleData) {
       return 'sample-data';

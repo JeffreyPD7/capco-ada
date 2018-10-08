@@ -1,0 +1,120 @@
+
+scss_files:
+  - 'app/*.scss'
+  - 'app/**/*.scss'
+
+exclude:
+  - 'node_modules/**'
+  - 'build/libs/**'
+  - 'build/custom-libs/**'
+
+linters:
+  BorderZero:
+    enabled: false
+
+  ColorVariable:
+    enabled: false
+
+  Comment:
+    enabled: false
+
+  Indentation:
+    exclude:
+      - 'path/to/file.scss'
+      - 'path/to/directory/**'
+    severity: warning
+    width: 2
+
+  LeadingZero:
+    style: include_zero
+
+  MergeableSelector:
+    enabled: false
+
+  PropertySortOrder:
+      order:
+        - # Font & Text
+        - font-family                # Text Properties -------------------------
+        - font-size
+        - font-style
+        - font-variant
+        - font-weight
+        - letter-spacing
+        - line-height
+        - text-decoration
+        - text-align      # Text Decoration Properties -------------------------
+        - text-indent
+        - text-transform
+        - text-shadow
+        - vertical-align
+        - white-space
+        - word-spacing
+        - # Color & Background
+        - background-attachment
+        - background-color
+        - background-image
+        - background-position
+        - background-repeat
+        - color
+        - opacity
+        - # Box
+        - height
+        - width
+        - border
+        - border-top
+        - border-right
+        - border-bottom
+        - border-left
+        - border-radius
+        - margin
+        - padding
+        - max-height
+        - min-height
+        - max-width
+        - min-width
+        - # Positioning
+        - position
+        - top
+        - bottom
+        - right
+        - left
+        - float
+        - display
+        - clear
+        - z-index
+        - # List
+        - list-style-image
+        - list-style-type
+        - list-style-position
+        - # Table
+        - border-collapse
+        - border-spacing
+        - caption-side
+        - empty-cells
+        - table-layout
+        - # Miscellaneous
+        - overflow
+        - cursor
+        - visibility
+        - # Effect
+        - transform
+        - transition
+        - outline
+        - outline-offset
+        - box-sizing
+        - resize
+        - text-overflow
+        - word-wrap
+        - box-shadow
+        - border-top-left-radius
+        - border-top-right-radius
+        - border-bottom-left-radius
+        - border-bottom-right-radius
+
+  SelectorFormat:
+    enabled: false
+
+
+
+
+
