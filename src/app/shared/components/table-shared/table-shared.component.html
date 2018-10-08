@@ -2,6 +2,7 @@
 <table>
   <thead>
   <tr>
+    <th class="w-100">Save Info</th>
     <th class="w-200">Name</th>
     <th class="w-150">Phone</th>
     <th class="w-150">Email</th>
@@ -30,6 +31,7 @@
     *ngFor="let data of this.dataList | slice:this.sliceStart:this.sliceEnd">
 
     <tr>
+      <td class="w-100"><button (click)="this.saveInfo(data.id, data.status)">Submit</button></td>
       <td class="w-200">{{ data.name }}</td>
       <td class="w-150">{{ data.phone }}</td>
       <td class="w-150">{{ data.email }}</td>
