@@ -7,25 +7,13 @@ import { NavigationEnd, ActivationStart, Router} from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
   title = 'capco-ada';
 
-  public showHome: boolean = false;
-  public showSampleData: boolean = false;
-  public showExtraCredit: boolean = false;
-
-  // public selectedFilter: number = 5;
-
-  // public filterRow: any[] = [
-  //   {id: 1, value: 5},
-  //   {id: 2, value: 10},
-  //   {id: 3, value: 15},
-  //   {id: 4, value: 20},
-  //   {id: 5, value: 25}
-  // ];
-
-  // public filterRow: any[] = []
+  public showHome = false;
+  public showSampleData = false;
+  public showExtraCredit = false;
 
     constructor(private router: Router) {}
 
