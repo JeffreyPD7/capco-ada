@@ -1,6 +1,5 @@
 
 import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, ActivationStart, Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,33 +14,14 @@ export class AppComponent implements OnInit {
   public showSampleData = false;
   public showExtraCredit = false;
 
-    constructor(private router: Router) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.router.events.subscribe(
-      (event: any) => {
-        if (event instanceof NavigationEnd) {
-          this.setCurrentRoute(event.url);
-        }
-      }
-    );
+  ngOnInit() {}
 
-    // Populate filterRow array
-    // for (let i = 1; i <= 5; i++) {
-    //   this.filterRow.push(
-    //     {id: i, value: 5 * i}
-    //     );
-    // }
-  }
-
-  public setCurrentRoute(url): void {
-    if (url === '/home') {
-      this.showHome = true;
-    } else if (url === '/sample-data') {
-      this.showSampleData = true;
-    } else if (url === '/extra-credit') {
-      this.showExtraCredit = true;
-    }
+  public onShowRouteEvent(e) {
+    this.showHome = e[0];
+    this.showSampleData = e[1];
+    this.showExtraCredit = e[2];
   }
 
   public setClasses(): string {
@@ -51,6 +31,4 @@ export class AppComponent implements OnInit {
       return 'extra-credit';
     }
   }
-
-
 }

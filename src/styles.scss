@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
 *,
 *::before,
 *::after {
@@ -8,7 +10,6 @@
 
 body {
   margin: 0;
-  //font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-family: "Ubuntu", "Roboto", "Helvetica", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -31,4 +32,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 ul {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+a {
+  text-decoration: none;
 }

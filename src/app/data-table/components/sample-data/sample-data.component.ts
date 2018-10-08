@@ -1,9 +1,5 @@
+
 import {Component, OnInit, Input} from '@angular/core';
-
-
-// import { SampleDataService
-// import { ISampleDat a} from '../../interfaces/sample-data.interface';
-import {NgForm} from '@angular/forms';
 
 import {SampleDataService} from '../../../shared/services/sample-data.service';
 import {ISampleData} from '../../../shared/interfaces/sample-data.interface';
