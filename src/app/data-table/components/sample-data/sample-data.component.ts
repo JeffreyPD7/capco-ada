@@ -19,19 +19,19 @@ export class SampleDataComponent implements OnInit {
   public errorMsg: string;
   public dataListLength: number;
 
-  public selectedFilter: number = 25;
+  public selectedFilter = 25;
   public filterRow: any[] = [];
 
   JSON: JSON;
 
 
   // Pagination Section ---------------------------------------
-  public currentPage: number = 1;
+  public currentPage = 1;
   // public newDataList: ISampleData[] = [];
 
-  public sliceStart: number = 0;
-  public sliceEnd: number = 25;
-  public numOfPages: number = 8;
+  public sliceStart = 0;
+  public sliceEnd = 25;
+  public numOfPages = 5;
 
 
 
@@ -64,27 +64,35 @@ export class SampleDataComponent implements OnInit {
 
   public populateArray(dataList: ISampleData[]): void {
     // let list
+    this.dataListLength = dataList.length;
+    // alert(`This is dataListLength ${this.dataListLength}`);
 
-    let list = Math.floor(dataList.length / this.selectedFilter);
+    let list = Math.floor(this.dataListLength / this.selectedFilter);
 
-    if ((dataList.length % this.selectedFilter) !== 0) {
+    if ((this.dataListLength % this.selectedFilter) !== 0) {
       list++;
     }
 
-    alert(list);
 
     for (let i = 1; i <= list; i++) {
       this.filterRow.push(
         {id: i, value: 25 * i}
       );
     }
+
+    this.numOfPages = list;
+
+    // alert(`This is filterRow ${JSON.stringify(this.filterRow)}`);
   }
 
   // Pagination Section ---------------------------------------
+
   public nextPage(): void {
     this.sliceStart = this.sliceEnd;
-    this.sliceEnd = this.sliceStart + this.selectedFilter;
+    this.sliceEnd = this.sliceEnd + this.selectedFilter;
     this.currentPage++;
+
+    // alert(`This is the selectedFileter ${this.selectedFilter}`);
   }
 
   public previousPage(): void {
@@ -100,8 +108,8 @@ export class SampleDataComponent implements OnInit {
   }
 
   public lastPage(): void {
-    this.sliceEnd = 200;
-    this.sliceStart = 200 - this.selectedFilter;
+    this.sliceEnd = this.dataListLength;
+    this.sliceStart = this.dataListLength - this.selectedFilter;
     this.currentPage = this.numOfPages;
   }
 
@@ -109,9 +117,9 @@ export class SampleDataComponent implements OnInit {
     this.sliceStart = 0;
     this.sliceEnd = event;
     this.currentPage = 1;
-    this.numOfPages = Math.floor(200 / this.selectedFilter);
+    this.numOfPages = Math.floor(this.dataListLength / this.selectedFilter);
 
-    if ((200 % this.selectedFilter) !== 0) {
+    if ((this.dataListLength % this.selectedFilter) !== 0) {
       this.numOfPages++;
     }
   }
