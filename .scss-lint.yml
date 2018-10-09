@@ -59,7 +59,11 @@ linters:
         - opacity
         - # Box
         - height
+        - max-height
+        - min-height
         - width
+        - max-width
+        - min-width
         - border
         - border-top
         - border-right
@@ -67,11 +71,15 @@ linters:
         - border-left
         - border-radius
         - margin
+        - margin-top
+        - margin-right
+        - margin-bottom
+        - margin-left
         - padding
-        - max-height
-        - min-height
-        - max-width
-        - min-width
+        - padding-top
+        - padding-right
+        - padding-bottom
+        - padding-left
         - # Positioning
         - position
         - top
@@ -93,8 +101,9 @@ linters:
         - empty-cells
         - table-layout
         - # Miscellaneous
-        - overflow
         - cursor
+        - overflow
+        - user-select
         - visibility
         - # Effect
         - transform

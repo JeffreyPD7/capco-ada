@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
    * @public
    * @param {Array<boolean>} e - EventEmitter array
    */
-  public onShowRouteEvent(e) {
+  public onShowRouteEvent(e: boolean[]): void {
     this.showHome = e[0];
     this.showSampleData = e[1];
     this.showExtraCredit = e[2];

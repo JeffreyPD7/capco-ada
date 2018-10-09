@@ -1,17 +1,25 @@
+/*******************************************************************************
+* Default |
+*********/
 
 .container_-_footer {
-  background: #ededed;
-  width: 100%;
+  //------------------------- Color & Background
+  background-color: #ededed;
+  //------------------------- Box
   max-height: 45px;
+  width: 100%;
+  //------------------------- Positioning
   display: block;
   user-select: none;
 }
 
 .container_-_footer_--_filter-rows {
-  display: inline-block;
-  width: 25%;
+  //------------------------- Box
   height: 45px;
+  width: 25%;
   padding: 9px 0 0 10px;
+  //------------------------- Positioning
+  display: inline-block;
 
   select {
     border-radius: 4px;
@@ -19,10 +27,12 @@
 }
 
 .container_-_footer_--_pagination {
-  width: 75%;
+  //------------------------- Box
   max-height: 45px !important;
+  width: 75%;
   position: relative;
   float: right;
+  //------------------------- Positioning
   display: flex;
   justify-content: flex-end;
 }
@@ -31,10 +41,14 @@
 .last-page,
 .next-page,
 .previous-page {
-  height: 45px;
-  display: inline-block;
-  position: relative;
+  //------------------------- Font & Text
   text-align: left;
+  //------------------------- Box
+  height: 45px;
+  //------------------------- Positioning
+  position: relative;
+  display: inline-block;
+  //------------------------- Miscellaneous
   cursor: pointer;
 
   h3 {
@@ -55,9 +69,8 @@
 }
 
 .next-page {
-  padding-left: 10px;
-  position: relative;
   width: 80px;
+  position: relative;
 
   h3 {
     float: left;
@@ -65,16 +78,19 @@
 }
 
 .last-page {
-  padding-left: 10px;
+  //------------------------- Box
   width: 100px;
+  padding-left: 10px;
+  //------------------------- Positioning
   float: right;
 
   h3 {
-    float: left;
     margin-right: -10px;
+    float: left;
   }
 
   h4 {
+    //------------------------- Box
     height: 0;
     width: 0;
     margin: -2px 0 0 11px;
@@ -82,25 +98,30 @@
 }
 
 .double-arrow-left {
-  color: black;
-  display: inline;
-  padding: 6px;
+  //------------------------- Color & Background
+  color: #000;
+  //------------------------- Box
   margin: 8px 0 0 15px;
+  padding: 6px;
+  //------------------------- Positioning
+  display: inline;
 
   h4 {
-    margin: 0;
     line-height: 0.5em;
+    margin: 0;
   }
 }
 
 .arrow-right {
-  color: black;
-  display: block;
+  //------------------------- Color & Background
+  color: #000;
+  //------------------------- Positioning
   position: absolute;
-  left: 40px;
   top: 6px;
+  left: 40px;
+  display: block;
+  //------------------------- Miscellaneous
   transform: rotate(90deg) scale(2);
-
 }
 
 .double-arrow-left {
@@ -109,22 +130,28 @@
 }
 
 .double-arrow-right {
-  transform: rotate(90deg) scale(2);
+  //------------------------- Positioning
   position: absolute;
   display: inline;
+  //------------------------- Miscellaneous
+  transform: rotate(90deg) scale(2);
 
   h4 {
-    width: 10px;
-    height: 10px;
+    //------------------------- Font & Text
     line-height: 0;
+    //------------------------- Box
+    height: 10px;
+    width: 10px;
   }
 }
 
 .pages {
+  //------------------------- Box
   height: 45px;
   width: auto;
-  float: left;
   padding-top: 8px;
+  //------------------------- Positioning
+  float: left;
 }
 
 .num-one,
@@ -132,8 +159,8 @@
 .num-three,
 .num-four,
 .num-five {
-  display: inline-block;
   padding: 0 8px;
+  display: inline-block;
 }
 
 .num-one,
@@ -143,17 +170,27 @@
 }
 
 .num-three {
-  background-color: #64B5F6;
-  color: white;
+  //------------------------- Color & Background
+  background-color: #64b5f6;
+  color: #fff;
+  //------------------------- Box
   height: 28px;
   border-radius: 8px;
   padding-bottom: 8px;
 }
 
 .isDisabled {
-  color: #C1C1C1;
+  color: #c1c1c1;
 
   h4 {
-    color: #C1C1C1;
+    color: #c1c1c1;
   }
 }
+
+// Animation -------------------------------------------------------------------
+
+// Active ----------------------------------------------------------------------
+
+// Hover -----------------------------------------------------------------------
+
+// Layouts ---------------------------------------------------------------------

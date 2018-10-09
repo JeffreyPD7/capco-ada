@@ -1,5 +1,5 @@
 
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NavigationEnd, Router} from '@angular/router';
 
 @Component({
@@ -19,6 +19,8 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+
+    // Get current page url on refresh/reload
     this.router.events.subscribe(
       (event: any) => {
         if (event instanceof NavigationEnd) {
@@ -26,9 +28,17 @@ export class HeaderComponent implements OnInit {
         }
       }
     );
+
   }
 
-  public onShowRouteEventChange() {
+
+  /**
+   * Emits output values on change of routes
+   *
+   * @method
+   * @public
+   */
+  public onShowRouteEventChange(): void {
     const eventsArray: boolean[] = [
       this.showHome,
       this.showSampleData,
@@ -38,7 +48,15 @@ export class HeaderComponent implements OnInit {
     this.showRouteEvent.emit(eventsArray);
   }
 
-  public setCurrentRoute(url): void {
+
+  /**
+   * Set route values to the pertaining url
+   *
+   * @method
+   * @public
+   * @param {string} url - holds the current page url on refresh
+   */
+  public setCurrentRoute(url: string): void {
     if (url === '/home') {
       this.showHome = true;
     } else if (url === '/sample-data') {

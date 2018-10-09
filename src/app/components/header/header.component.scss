@@ -1,67 +1,89 @@
 
+/*******************************************************************************
+* Default |
+*********/
+
 header {
+  //------------------------- Color & Background
+  background-color: #fff;
+  color: #fff;
+  //------------------------- Box
   height: 50px;
   width: 100%;
-
-  position: relative;
-  background-color: #FFF;
-  color: white;
   margin: 0;
-  box-shadow: 0px 2px 5px rgba(black, 0.5);
-
+  //------------------------- Positioning
+  position: relative;
+  //------------------------- Effect
+  box-shadow: 0 2px 5px rgba(#000, 0.5);
 }
 
 .header_-_logo {
-  position: relative;
+  //------------------------- Color & Background
+  color: #000;
+  //------------------------- Box
   height: inherit;
   width: 250px;
-  display: inline-block;
+  //------------------------- Positioning
+  position: relative;
   float: left;
-  color: black;
+  display: inline-block;
 
   h3 {
-    margin: 10px 10px 0 10px;
+    margin: 10px 10px 0;
     float: left;
   }
 }
 
 .header_-_logo_--_breadcrumbs {
-  display: inline-block;
-  float: left;
+  //------------------------- Box
   height: inherit;
   width: 65%;
+  //------------------------- Positioning
+  float: left;
+  display: inline-block;
 }
 
 .header_-_logo_--_breadcrumbs_---_double-arrow h4 {
-  float: left;
-  transform: rotate(90deg) scale(2);
+  //------------------------- Box
   margin-top: 12px;
+  //------------------------- Positioning
+  float: left;
+  //------------------------- Effect
+  transform: rotate(90deg) scale(2);
+
+
 }
 
 .header_-_logo_--_breadcrumbs_---_page h4 {
+  //------------------------- Box
   margin-top: 11px;
   margin-left: 15px;
+  //------------------------- Positioning
   float: left;
+
 }
 
 .header_-_nav {
+  //------------------------- Color & Background
+  color: inherit;
+  //------------------------- Box
   height: inherit;
   width: 350px;
+  //------------------------- Positioning
   float: right;
-  color: inherit;
 
   ul {
     display: inline-block;
   }
 
   li {
-    display: inline-block;
     float: left;
+    display: inline-block;
   }
 
   a {
-    padding: 10px;
     line-height: 3rem;
+    padding: 10px;
   }
 }
 
@@ -76,15 +98,27 @@ header {
 }
 
 .header_-_nav a:hover {
-  background-color: #59B6F3;
-  color: white;
+  background-color: #59b6f3;
+  color: #fff;
 }
 
 .header_-_nav a {
   transition: background-color 500ms;
 }
 
+
+
+
+// Animation -------------------------------------------------------------------
+
+// Active ----------------------------------------------------------------------
+
 .active {
-  background-color: #59B6F3;
-  color: white;
+  background-color: #59b6f3;
+  color: #fff;
 }
+
+// Hover -----------------------------------------------------------------------
+
+// Layouts ---------------------------------------------------------------------
+

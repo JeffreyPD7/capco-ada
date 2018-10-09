@@ -36,49 +36,49 @@
 //}
 
 .container {
-  //------------------------- Color & Background
+//------------------------- Color & Background
   background-color: #fff;
-  //------------------------- Box
+//------------------------- Box
   height: 350px;
   width: 50%;
   border-radius: 8px;
   margin: 100px auto;
-  //------------------------- Positioning
+//------------------------- Positioning
   display: block;
-  //------------------------- Miscellaneous
+//------------------------- Miscellaneous
   overflow: hidden;
-  //------------------------- Effect
+//------------------------- Effect
   box-shadow: 0 2px 5px rgba(#000, 0.5);
 
   &--sample-data {
-    //------------------------- Box
+  //------------------------- Box
     height: 550px;
     width: 85%;
     margin: 30px auto;
   }
 
   &--extra-credit {
-    //------------------------- Box
+  //------------------------- Box
     height: auto;
     width: 90%;
     margin: 30px auto;
-    //------------------------- Miscellaneous
+  //------------------------- Miscellaneous
     overflow: hidden;
   }
 }
 
 .container_-_body {
-  //------------------------- Box
+//------------------------- Box
   height: inherit;
   width: 100%;
-  //------------------------- Positioning
+//------------------------- Positioning
   position: relative;
 }
 
 .container_-_footer {
-  //------------------------- Color & Background
+//------------------------- Color & Background
   background-color: #3d5afe;
-  //------------------------- Box
+//------------------------- Box
   height: 100%;
   width: 100%;
   padding: 5px 0 0 10px;
