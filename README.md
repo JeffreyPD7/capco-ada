@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
+## JSON Server
+
+Run `json-server --watch src/api/submit.json` in order to store POST requests. Navigate to `http://localhost:3000/submitInfo` to view submitted data.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
