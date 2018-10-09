@@ -27,13 +27,22 @@ export class TableSharedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    // Get file json data from sample_data
     this._sampleData.getData()
       .subscribe(
         data => this.dataList = data,
         error => this.errorMsg = <any>error
       );
+
   }
 
+  /**
+   * POST request on submit file located in api directory
+   *
+   * @param {number} rowId
+   * @param {string} rowStatus
+   */
   public saveInfo(rowId: number, rowStatus: string): void {
     this.httpClient.post<IDataPost>('http://localhost:3000/submitInfo',
       {
@@ -52,6 +61,7 @@ export class TableSharedComponent implements OnInit {
     alert(`Row of ID ${rowId} and Status of ${rowStatus} has been submitted to api/submit`);
   }
 
+  // -- PENDING --
   // private handleError(errorResponse: HttpErrorResponse) {
   //   if (errorResponse.error instanceof ErrorEvent) {
   //     console.error('Client Side Error :', errorResponse.error.message);

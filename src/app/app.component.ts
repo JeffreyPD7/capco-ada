@@ -8,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  title = 'capco-ada';
-
   public showHome = false;
   public showSampleData = false;
   public showExtraCredit = false;
