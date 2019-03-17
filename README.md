@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## JSON Server
 
-Run `json-server --watch src/api/submit.json` in order to store POST requests. Navigate to `http://localhost:3000/submitInfo` to view submitted data.
+Run `npm start` in order to run json-server to store POST requests and start dev server. Navigate to `http://localhost:3000/submitInfo` to view submitted data.
 
 ## Development server
 
